@@ -1,0 +1,30 @@
+# Move this file into local FW copy.
+# e.g. STM32Cube_FW_F4_V1.25.1
+# Rename to .dockerignore
+#
+# Reduce bloat in copied firmware.
+# Drops size from 1.9G to 156M, ~90% reduction
+
+# ignore everything
+STM32Cube_FW_*/*
+
+# The only directories to include
+!STM32Cube_FW_*/Drivers
+!STM32Cube_FW_*/Middlewares
+!STM32Cube_FW_*/License.md
+
+# Additional things to ignore in those directories
+
+STM32Cube_FW_*/Drivers/CMSIS/DSP/DSP_Lib_TestSuite
+STM32Cube_FW_*/Drivers/CMSIS/DSP/Examples
+STM32Cube_FW_*/Drivers/CMSIS/DSP/Projects
+STM32Cube_FW_*/Drivers/CMSIS/docs
+STM32Cube_FW_*/Drivers/STM32F4xx_HAL_Driver/*.chm
+
+STM32Cube_FW_*/Middlewares/ST/STM32_Audio
+STM32Cube_FW_*/Middlewares/ST/STemWin
+STM32Cube_FW_*/Middlewares/ST/TouchGFX
+
+STM32Cube_FW_*/Middlewares/Third_Party/FatFs/doc
+STM32Cube_FW_*/Middlewares/Third_Party/LwIP/doc
+STM32Cube_FW_*/Middlewares/Third_Party/mbedTLS/tests
