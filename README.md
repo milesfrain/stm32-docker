@@ -4,7 +4,7 @@ Edit and run the `build.sh` script, then upload to dockerhub.
 
 Contains:
 * STM32CubeIDE
-* Firmware for F4 line. Fee free to fork and customize for your purposes.
+* Firmware for F4 line. Feel free to fork and customize for your purposes.
 * `clang-format` for detecting formatting errors
 * `cpputest` for unit testing
 * `lcov` for code coverage
