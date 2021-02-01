@@ -1,0 +1,21 @@
+# Reduces FW size from 1.9G to 173M.
+# See "FILTER RULES" section of 'man rsync' for syntax info.
++ /License.md
++ /package.xml
++ /Middlewares
++ /Middlewares/ST
++ /Middlewares/ST/STM32_USB_Device_Library
++ /Middlewares/ST/STM32_USB_Host_Library
+# Some dependencies excluded with wildcard:
+# /Middlewares/ST/TouchGFX
+# /Middlewares/ST/STemWin
+# /Middlewares/ST/STM32_Audio
+- /Middlewares/ST/*
++ /Middlewares/Third_Party
+- /Middlewares/Third_Party/LwIP/doc
+- /Middlewares/Third_Party/mbedTLS/tests
+- /Middlewares/Third_Party/FatFs/doc
++ /Drivers
+- /Drivers/CMSIS/docs
+- /Drivers/STM32F4xx_HAL_Driver/*.chm
+- /*

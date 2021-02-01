@@ -2,7 +2,7 @@
 # ./build.sh
 
 # The above script expects the host to have the following installed:
-#   /opt/st/stm32cubeide...
+#   ~/st/stm32cubeide...
 #   ~/STM32Cube/Repository/STM32Cube_FW_...
 
 FROM ubuntu:20.04
@@ -25,11 +25,11 @@ ARG fw
 # Convenience variables
 ARG stm_repo=/usr/share/stm_repo
 
-# Copy firmware
-RUN mkdir -p $stm_repo
-COPY $fw $stm_repo/$fw
-
 # Copy ide
 RUN mkdir -p /opt/st
 COPY $ide /opt/st/$ide
 
+
+# Copy firmware
+RUN mkdir -p $stm_repo
+COPY $fw $stm_repo/$fw
