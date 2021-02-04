@@ -23,7 +23,7 @@ ARG fw
 # e.g. STM32Cube_FW_F4_V1.25.1
 
 # Convenience variables
-ARG stm_repo=/usr/share/stm_repo
+ARG stm_repo=/usr/local/share/stm_repo
 
 # Copy ide
 RUN mkdir -p /opt/st
@@ -33,3 +33,7 @@ COPY $ide /opt/st/$ide
 # Copy firmware
 RUN mkdir -p $stm_repo
 COPY $fw $stm_repo/$fw
+
+# Backwards compatibility for linux-only FW path.
+# Will eventually deprecate.
+RUN ln -s $stm_repo /usr/share/stm_repo
